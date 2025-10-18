@@ -10,7 +10,7 @@ import axios from 'axios';
 axios.defaults.baseURL =
   import.meta.env.MODE === 'development'
     ? 'http://localhost:3001/api'
-    : 'https://website-landingmercadolivre-react.onrender.com/';
+    : 'https://website-landingmercadolivre-react.onrender.com/api';
 
 export const ContextoCarrinho = createContext(null);
 
