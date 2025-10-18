@@ -7,7 +7,11 @@ import Product from './pages/Product';
 import Carrinho from './components/Carrinho';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:3001/api';
+axios.defaults.baseURL =
+  import.meta.env.MODE === 'development'
+    ? 'http://localhost:3001/api'
+    : 'https://website-landingmercadolivre-react.onrender.com/';
+
 export const ContextoCarrinho = createContext(null);
 
 function App() {
